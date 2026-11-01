@@ -1,0 +1,25 @@
+## Службові файли та кеш Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Результати компіляції (бінарники)
+[Bb]in/
+[Oo]bj/
+
+## Згенеровані пакети та залежності
+packages/
+*.nuget.props
+*.nuget.targets
+
+## Локальні бази даних (щоб не заливати тестові дані в репозиторій)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+## Звіти про покриття тестами та логи
+TestResults/
+*.log

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OnnxTextAnalyzer.Tests/OnnxTextAnalyzer.Tests.csproj" />
+  <Project Path="OnnxTextAnalyzer/OnnxTextAnalyzer.csproj" />
+</Solution>
