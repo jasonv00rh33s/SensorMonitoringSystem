@@ -1,0 +1,29 @@
+name: .NET CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Завантаження коду
+      uses: actions/checkout@v4
+
+    - name: Налаштування .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.401' 
+
+    - name: Встановлення залежностей
+      run: dotnet restore
+
+    - name: Збірка проєкту
+      run: dotnet build --no-restore
+
+    - name: Запуск автотестів
+      run: dotnet test --no-build --verbosity normal
